@@ -4,6 +4,7 @@ from datetime import datetime
 from uuid import uuid4
 import models
 
+
 class BaseModel:
     """Represents the foundational BaseModel class for the HBnB project."""
 
@@ -28,7 +29,7 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """Update the 'updated_at' attribute with the current datetime and save changes."""
+        """'updated_at' attribute with the current datetimesave changes."""
         self.updated_at = datetime.today()
         models.initialize_storage.save()
 
@@ -44,6 +45,6 @@ class BaseModel:
         return result_dict
 
     def __str__(self):
-        """Return a string representation of the BaseModel instance."""
-        class_name = self.__class__.__name__
-        return "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
+        """Return the print/str representation of the BaseModel instance."""
+        clname = self.__class__.__name__
+        return "[{}] ({}) {} ".format(clname, self.id, self.__dict__)

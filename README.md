@@ -1,6 +1,7 @@
 # AirBnB Clone Project
 # AirBnB clone - The console
 
+
 This is the first piece of tihe AirBnB project which is among the major projects Alx students are tasked. It sheds light on file serialization, objects and creation of a file storage.
 It is command line interface from which you can create and modify files in storage before you can build up on the rest of your AirBnB application.
 # Base Model
@@ -8,6 +9,7 @@ Base Model is the project’s parent class that will handle initialization, seri
 All other clases will inherit from the base class.
 # Create other classes
 Class User, State, City, Place among other classes created will all inherit from the parent class Base Model.
+
 # Command-line interpreter
 Program that provides a text based interface for interacting with an operating system or executing commands.
 # Starting the command interpreter
@@ -56,9 +58,11 @@ To ensure the correctness of your implementation, it is important to create unit
 Additionally, you will need to create a storage engine, starting with a file storage system. This storage engine will handle the reading and writing of objects to files, providing the functionality required for object persistence.
 You will also need to implement a flow of serialization/deserialization, which involves converting instances of objects to dictionaries, JSON strings, and storing them in files.
 
+
 # Authors
 This project is a collaborative effort. The following individuals have contributed to the repository:
 Benard Ronoh  <biikate48@gmail.com>
+wambui-mungai <wambuim220@gmail.com>
 
 ### Branches and Pull Requests
 

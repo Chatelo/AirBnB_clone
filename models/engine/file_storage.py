@@ -9,6 +9,7 @@ from models.review import Review
 from models.state import State
 from models.user import User
 
+
 class FileStorage:
     """Represents an abstracted storage engine.
 
@@ -32,12 +33,14 @@ class FileStorage:
     def save(self):
         """Serialize __objects into the JSON file __file_path."""
         objects_dict = FileStorage.__objects
-        serialized_dict = {key: objects_dict[key].to_dict() for key in objects_dict.keys()}
+        serialized_dict = \
+            {key: objects_dict[key].to_dict()for key in objects_dict.keys()}
         with open(FileStorage.__file_path, "w") as file:
             json.dump(serialized_dict, file)
 
     def reload(self):
-        """Deserialize the JSON file __file_path into __objects, if the file exists."""
+        """Deserialize the JSON file __file_path into \
+            __objects, if the file exists."""
         try:
             with open(FileStorage.__file_path) as file:
                 deserialized_dict = json.load(file)
