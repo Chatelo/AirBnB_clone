@@ -15,6 +15,7 @@ from time import sleep
 import models
 from models.place import Place
 
+
 class TestPlace_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Place class."""
 
@@ -244,6 +245,7 @@ class TestPlace_to_dict(unittest.TestCase):
         pl = Place()
         with self.assertRaises(TypeError):
             pl.to_dict(None)
+
 
 if __name__ == "__main__":
     unittest.main()

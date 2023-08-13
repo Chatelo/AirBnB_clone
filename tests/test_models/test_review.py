@@ -12,9 +12,9 @@ import os
 import unittest
 from datetime import datetime
 from time import sleep
-
 import models
 from models.review import Review
+
 
 class TestReview_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Review class."""
@@ -97,6 +97,7 @@ class TestReview_instantiation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Review(id=None, created_at=None, updated_at=None)
 
+
 class TestReview_save(unittest.TestCase):
     """Unittests for testing save method of the Review class."""
 
@@ -147,6 +148,7 @@ class TestReview_save(unittest.TestCase):
         with open("file.json", "r") as f:
             self.assertIn(rvid, f.read())
 
+
 class TestReview_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the Review class."""
 
@@ -195,6 +197,7 @@ class TestReview_to_dict(unittest.TestCase):
         rv = Review()
         with self.assertRaises(TypeError):
             rv.to_dict(None)
+
 
 if __name__ == "__main__":
     unittest.main()

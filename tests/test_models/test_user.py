@@ -16,6 +16,7 @@ from time import sleep
 import models
 from models.user import User
 
+
 class TestUser_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the User class."""
 
@@ -91,6 +92,7 @@ class TestUser_instantiation(unittest.TestCase):
         with self.assertRaises(TypeError):
             User(id=None, created_at=None, updated_at=None)
 
+
 class TestUser_save(unittest.TestCase):
     """Unittests for testing save method of the  class."""
 
@@ -141,6 +143,7 @@ class TestUser_save(unittest.TestCase):
         with open("file.json", "r") as f:
             self.assertIn(usid, f.read())
 
+
 class TestUser_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the User class."""
 
@@ -189,6 +192,7 @@ class TestUser_to_dict(unittest.TestCase):
         us = User()
         with self.assertRaises(TypeError):
             us.to_dict(None)
+
 
 if __name__ == "__main__":
     unittest.main()

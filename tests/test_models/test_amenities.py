@@ -7,7 +7,6 @@ Unittest classes:
     TestAmenity_save
     TestAmenity_to_dict
 """
-
 import os
 import unittest
 from datetime import datetime

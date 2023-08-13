@@ -15,6 +15,7 @@ from time import sleep
 import models
 from models.state import State
 
+
 class TestState_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the State class."""
 
@@ -84,6 +85,7 @@ class TestState_instantiation(unittest.TestCase):
         with self.assertRaises(TypeError):
             State(id=None, created_at=None, updated_at=None)
 
+
 class TestState_save(unittest.TestCase):
     """Unittests for testing save method of the State class."""
 
@@ -134,6 +136,7 @@ class TestState_save(unittest.TestCase):
         with open("file.json", "r") as f:
             self.assertIn(stid, f.read())
 
+
 class TestState_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the State class."""
 
@@ -182,6 +185,7 @@ class TestState_to_dict(unittest.TestCase):
         st = State()
         with self.assertRaises(TypeError):
             st.to_dict(None)
+
 
 if __name__ == "__main__":
     unittest.main()
