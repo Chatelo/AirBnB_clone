@@ -2,15 +2,16 @@
 
 """Definition of unit tests for the console.py module.
 
-These unittest classes cover various functionalities of the HBNB command interpreter:
+These unittest classes cover functionalities  of HBNB command interpreter:
 
-1. TestHBNBCommand_prompting: Tests related to the console prompt and input handling.
-2. TestHBNBCommand_help: Tests for help messages displayed by the command interpreter.
-3. TestHBNBCommand_exit: Tests for the 'quit' and 'EOF' commands to exit the program.
-4. TestHBNBCommand_create: Tests for the 'create' command to create new instances.
-5. TestHBNBCommand_show: Tests for the 'show' command to display instance information.
+1. TestHBNBCommand_prompting: Tests related to console prompt&input handling
+2. TestHBNBCommand_help: Tests helps mesgs displayed by command interpreter
+3. TestHBNBCommand_exit: Tests for the 'quit'&'EOF' commands to exit program
+4. TestHBNBCommand_create: Tests to 'create' command to create new instances
+5. TestHBNBCommand_show: Tests to 'show' command to display instance info
 
-Each unittest class contains specific test methods to cover different scenarios.
+Each unittest class contains specific test \
+methods to cover different scenarios.
 """
 
 import os
