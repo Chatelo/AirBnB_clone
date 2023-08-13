@@ -4,14 +4,11 @@
 
 These unittest classes cover functionalities  of HBNB command interpreter:
 
-1. TestHBNBCommand_prompting: Tests related to console prompt&input handling
-2. TestHBNBCommand_help: Tests helps mesgs displayed by command interpreter
-3. TestHBNBCommand_exit: Tests for the 'quit'&'EOF' commands to exit program
-4. TestHBNBCommand_create: Tests to 'create' command to create new instances
-5. TestHBNBCommand_show: Tests to 'show' command to display instance info
-
-Each unittest class contains specific test \
-methods to cover different scenarios.
+1. TestHBNBCommand_prompting
+2. TestHBNBCommand_help
+3. TestHBNBCommand_exit
+4. TestHBNBCommand_create
+5. TestHBNBCommand_show
 """
 
 import os
@@ -25,6 +22,7 @@ from models.engine.file_storage import FileStorage
 
 
 class TestHBNBCommand_prompting(unittest.TestCase):
+    self.maxDiff = None
     """Unittests for testing prompting of the HBNB command interpreter."""
 
     def test_prompt_string(self):
@@ -34,6 +32,7 @@ class TestHBNBCommand_prompting(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd(""))
             self.assertEqual("", output.getvalue().strip())
+
 
 
 class TestHBNBCommand_help(unittest.TestCase):
